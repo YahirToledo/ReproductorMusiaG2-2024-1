@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReproductorMusiaG2-2024-1", "ReproductorMusiaG2-2024-1.csproj", "{4878F3C5-192B-458C-8EF8-5125E824B0E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutenticacionG2-2024-1", "..\AutenticacionG2-2024-1\AutenticacionG2-2024-1.csproj", "{E78D21E6-28C7-4DF6-ABD0-1E873C79848C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4878F3C5-192B-458C-8EF8-5125E824B0E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4878F3C5-192B-458C-8EF8-5125E824B0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4878F3C5-192B-458C-8EF8-5125E824B0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4878F3C5-192B-458C-8EF8-5125E824B0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E78D21E6-28C7-4DF6-ABD0-1E873C79848C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78D21E6-28C7-4DF6-ABD0-1E873C79848C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78D21E6-28C7-4DF6-ABD0-1E873C79848C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78D21E6-28C7-4DF6-ABD0-1E873C79848C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85940A5D-8051-4730-92BF-F489A1806C14}
+	EndGlobalSection
+EndGlobal
