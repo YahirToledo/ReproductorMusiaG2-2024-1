@@ -1,7 +1,7 @@
 ﻿
 namespace ReproductorMusiaG2_2024_1
 {
-    internal class Musica
+    public class Musica
     {
         #region Atributos
         private string artista;
@@ -10,7 +10,7 @@ namespace ReproductorMusiaG2_2024_1
         #endregion
 
         #region Constructor
-        public Musica(string artista, string album, string titulo)
+        public Musica(string artista, string titulo, string album)
         {
             Artista = artista;
             Titulo = titulo;

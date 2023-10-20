@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ReproductorMusiaG2_2024_1
 {
@@ -23,17 +24,27 @@ namespace ReproductorMusiaG2_2024_1
 
         private void CargarCanciones()
         {
+            //canciones.Add(new Musica("", "", ""));
             canciones.Add(new Musica("Peso Pluma", "Lady Gaga", "Genesis"));
             canciones.Add(new Musica("Michael Jackson", "Thriller", "Thriller"));
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CargarCanciones();
-            foreach (object cancion in canciones)
+            if (canciones.Count <= 0)
             {
-                Musica musica = (Musica)cancion;
-                lstbCanciones.Items.Add(musica.Titulo);
+                CargarCanciones();
+                lstbCanciones.Items.Clear();
+                foreach (object cancion in canciones)
+                {
+                    Musica musica = (Musica)cancion;
+                    lstbCanciones.Items.Add(musica.Titulo);
+                }
+                MessageBox.Show("Ya se agrego una vez");
+            }
+            else
+            {
+                MessageBox.Show("Ya no se agregan mas canciones repetidas");
             }
         }
 
@@ -48,7 +59,14 @@ namespace ReproductorMusiaG2_2024_1
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAgregar formAgregar = new FormAgregar();
+            formAgregar.EnviarMusica += AgregarCancion;
             formAgregar.ShowDialog();
+        }
+
+        public void AgregarCancion(Musica musica)
+        {
+            canciones.Add(musica);
+            lstbCanciones.Items.Add(musica.Titulo);
         }
     }
 }
