@@ -46,14 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregar.Designer.cs">
+      <DependentUpon>FormAgregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReproductor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormReproductor.Designer.cs">
       <DependentUpon>FormReproductor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Musica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAgregar.resx">
+      <DependentUpon>FormAgregar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReproductor.resx">
       <DependentUpon>FormReproductor.cs</DependentUpon>
     </EmbeddedResource>
