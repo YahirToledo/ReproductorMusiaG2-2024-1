@@ -1,7 +1,6 @@
-﻿
-namespace ReproductorMusiaG2_2024_1
+﻿namespace ReproductorMusiaG2_2024_1
 {
-    public class Musica
+    public struct Musica
     {
         #region Atributos
         private string artista;
@@ -10,7 +9,7 @@ namespace ReproductorMusiaG2_2024_1
         #endregion
 
         #region Constructor
-        public Musica(string artista, string titulo, string album)
+        public Musica(string artista, string titulo, string album) : this()
         {
             Artista = artista;
             Titulo = titulo;

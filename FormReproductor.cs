@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ReproductorMusiaG2_2024_1
 {
     public partial class FormReproductor : Form
     {
         private Form formPadre;
-        private ArrayList canciones;
+        //private ArrayList canciones;
+        List<Musica> canciones;
+        
         public FormReproductor(Form formPadre)
         {
             InitializeComponent();
             this.formPadre = formPadre;
-            canciones = new ArrayList();
+            //canciones = new ArrayList();
+            canciones = new List<Musica>();
         }
 
         private void FormReproductor_FormClosing(object sender, FormClosingEventArgs e)
@@ -24,7 +27,6 @@ namespace ReproductorMusiaG2_2024_1
 
         private void CargarCanciones()
         {
-            //canciones.Add(new Musica("", "", ""));
             canciones.Add(new Musica("Peso Pluma", "Lady Gaga", "Genesis"));
             canciones.Add(new Musica("Michael Jackson", "Thriller", "Thriller"));
         }
@@ -50,7 +52,7 @@ namespace ReproductorMusiaG2_2024_1
 
         private void lstbCanciones_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Musica musica = (Musica)canciones[lstbCanciones.SelectedIndex];
+            Musica musica = canciones[lstbCanciones.SelectedIndex];
             lbTitulo.Text = musica.Titulo;
             lbArtista.Text = musica.Artista;
             lbAlbum.Text = musica.Album;
